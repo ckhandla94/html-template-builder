@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<title> {% if title %} {{title}} {% else %} Home Page Else {% endif %} </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  	<link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  	{% block css %} {% endblock %}
+</head>
+<body>
+
+  {% include "partial/header.html" ignore missing %}
+
+  {% block content %} {% endblock %}
+
+  {% include "partial/footer.html" ignore missing %}
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  {% block script %} {% endblock %}
+</body>
+</html>
