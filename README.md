@@ -24,7 +24,7 @@ $ npm i
 Start the dev server
 
 ```sh
-$ gulp watch
+$ npm watch
 ```
 
 Once the development server is started you should be able to reach the demo page (eg. `http://localhost:3000`)
@@ -33,13 +33,13 @@ Once the development server is started you should be able to reach the demo page
 Build Development
 
 ```sh
-$ gulp build-dev
+$ npm run build:dev
 ```
 
 Build Production
 
 ```sh
-$ gulp build
+$ npm run build
 ```
 
 ## Demo

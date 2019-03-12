@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  	<meta charset="UTF-8">
-  	<title> {% if title %} {{title}} {% else %} Home Page Else {% endif %} </title>
+    <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-  	<link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-  	{% block css %} {% endblock %}
+    <title>{% if title %} {{title}} {% else %} {{site_name}} {% endif %} </title>
+    {% block before_css %} {% endblock %}
+    <link rel="stylesheet" href="{{assets('css/styles.css')}}">
+    {% if isPageCssExists(page_name) %}
+    <link rel="stylesheet" href="{{assets('css/' + page_name + '.css')}}">
+    {% endif %}
+    {% block after_css %} {% endblock %}
 </head>
-<body>
+<body class="single-page causes-page">
 
   {% include "partial/header.html" ignore missing %}
 
@@ -17,9 +20,10 @@
 
   {% include "partial/footer.html" ignore missing %}
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
+  {% block before_script %} {% endblock %}
 
-  {% block script %} {% endblock %}
+  <script type='text/javascript' src="{{assets('js/vendor.js')}}"></script>
+  <script type='text/javascript' src="{{assets('js/app.js')}}"></script>
+  {% block after_script %} {% endblock %}
 </body>
 </html>
