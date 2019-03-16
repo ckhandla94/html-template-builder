@@ -1,0 +1,166 @@
+@mixin sass-themify-init($scheme-table){
+  @if $scheme-table == null{
+    @error "[sass-themify] sass-themify mixin needs a valid $scheme-table map defined"
+  } @else {
+    @if variable-exists("sass-themify-scheme-table") {
+      @warn "[sass-themify] sass-themify has already been initialized once. Initializing again will replace the previous initialized color scheme"
+    }
+    $sass-themify-scheme-table: $scheme-table !global;
+  }
+}
+
+@mixin themify($element:"body"){
+  //determine if global varaible has been declared or not
+  @if not variable-exists("sass-themify-theme-name") {
+    $sass-themify-theme-name: null !global;
+  }
+
+  @each $theme-name, $color-map in $sass-themify-scheme-table{
+    $sass-themify-theme-name: $theme-name !global;
+    @if $theme-name != "default"{
+      #{$element}.#{$theme-name} &{
+        @content;
+      }
+    } @else {
+      #{$element}{
+        @content;
+      }
+    }
+    $sass-themify-theme-name: null !global;
+  }
+}
+
+@function sass-themify-get-map-deep($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+
+@function themify-color($component){
+
+  @if $sass-themify-scheme-table == null {
+    @error "[sass-themify] You need to call sass-themify mixin to initialize a theme before you can call the sass-themify-get function.";
+  }
+  @if $sass-themify-theme-name == null {
+    @error "[sass-themify] sass-themify-get function can only be used within the scope of the 'sass-themify' mixin.";
+  }
+  $value : sass-themify-get-map-deep($sass-themify-scheme-table,$sass-themify-theme-name,$component);
+  
+  @return $value;
+}
+
+
+@function sass-themify-get-theme-name(){
+  @return $sass-themify-theme-name;
+}
+
+@function px2rem($px, $default:16){
+  $em : $px/$default;
+  @return #{$em}rem;
+}
+
+
+// Defining colors ===========================================
+
+$theme-map: (
+  blue: (
+    primary: #0e519e,
+    primaryText: #fff,
+
+    secondary: #a0ce5c,
+    secondaryText: #fff,
+
+    warn: #ff0000,
+    warnText: #fff,
+
+    third: #1fd9e6,
+    thirdText: #fff,
+
+    danger : #FF2A38,
+    dangerText: #fff,
+
+    success : #3c763d,
+    successText: #fff,
+
+    warning : #8a6d3b,
+    warningText: #fff,
+
+    grayDark: #303030,
+    grayDarkText: #bfbfbf,
+
+    grayNormal: #9d9d9d,
+    grayNormalText: #fff,
+
+    grayLight: #f0f5f7,
+    grayLightText: #000
+  ),
+  dark-blue: (
+    primary: #053a58,
+    primaryText: #fff,
+
+    secondary: #09a9b9,
+    secondaryText: #fff,
+
+    warn: #ff0000,
+    warnText: #fff,
+
+    third: #1fd9e6,
+    thirdText: #fff,
+
+    danger : #a94442,
+    dangerText: #fff,
+
+    success : #3c763d,
+    successText: #fff,
+
+    warning : #8a6d3b,
+    warningText: #fff,
+
+    grayDark: #303030,
+    grayDarkText: #bfbfbf,
+
+    grayNormal: #758690,
+    grayNormalText: #fff,
+
+    grayLight: #f0f5f7,
+    grayLightText: #000
+
+  ),
+
+  dark-red: (
+    primary: #ff0000,
+    primaryText: #fff,
+
+    secondary: #09a9b9,
+    secondaryText: #fff,
+
+    warn: #ff0000,
+    warnText: #fff,
+
+    third: #1fd9e6,
+    thirdText: #fff,
+
+    danger : #a94442,
+    dangerText: #fff,
+
+    success : #3c763d,
+    successText: #fff,
+
+    warning : #8a6d3b,
+    warningText: #fff,
+
+    grayDark: #303030,
+    grayDarkText: #bfbfbf,
+
+    grayNormal: #758690,
+    grayNormalText: #fff,
+
+    grayLight: #f0f5f7,
+    grayLightText: #000
+
+  )
+);
+
+@include sass-themify-init($theme-map);

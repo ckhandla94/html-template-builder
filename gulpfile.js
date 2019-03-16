@@ -163,9 +163,9 @@ gulp.task('browser-sync', ['build'], function() {
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-    gulp.watch('./src/sass/*', ['sass']);
-    gulp.watch('./src/html/*', ['html']);
-    gulp.watch('./src/assets/*', ['assets'])
+    gulp.watch('./src/**/*', ['build']);
+    //gulp.watch('./src/html/*', ['html']);
+    //gulp.watch('./src/assets/*', ['assets'])
     gulp.watch(dist).on('change', browserSync.reload);
 });
 

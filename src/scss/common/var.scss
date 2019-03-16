@@ -1,3 +1,4 @@
+@import 'theme';
 $assetPath: "/assets";
 $imagePath: "/assets/images";
 
@@ -9,9 +10,9 @@ $break-xs: 360px;
 $break-sm: 480px;
 $break-md: 767px;
 $break-lg: 991px;
-$break-ipad: 1024px;
 $break-xl: 1199px;
 $break-dsk: 1440px;
+$break-ipad: 1024px;
 
 @mixin respond($media) {
     @if $media==xs {
@@ -156,4 +157,21 @@ $break-dsk: 1440px;
 }
 .box-shadow-sm {
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.title{
+    font-size: 25px;
+    @include themify() {
+        color: themify-color("primary");
+        border-color: themify-color("primary");
+    }
+    @include respond(lg) {
+        font-size: 20px;
+    }
+    @include respond(md) {
+        font-size: 22px;
+    }
+    @include respond(sm) {
+        font-size: 20px;
+    }
 }
