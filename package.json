@@ -36,6 +36,7 @@
     "D": "^1.0.0",
     "bootstrap": "^4.1.3",
     "gulp-copy": "^4.0.1",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "owl.carousel": "^2.3.4"
   }
 }

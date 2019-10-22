@@ -1,5 +1,14 @@
 {% extends "layout.html" %}  
 
+{% block after_script %}
+<script>
+    console.log(123);
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel();
+    });
+</script>
+{% endblock %}
+
 {% block content %}
 
     <div class="our-causes">
@@ -13,6 +22,17 @@
             </div><!-- .row -->
 
             <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div> Your Content </div>
+                    <div> Your Content 1 </div>
+                    <div> Your Content 2</div>
+                    <div> Your Content 3</div>
+                    <div> Your Content 4</div>
+                    <div> Your Content 5</div>
+                    <div> Your Content 6</div>
+                </div>
+
+
                 <div class="col-12">
                     <div class="swiper-container causes-slider">
                         <div class="swiper-wrapper">
