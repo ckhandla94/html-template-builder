@@ -15,6 +15,9 @@ GrapesJS uses [Webpack](https://github.com/webpack/webpack) as a module bundler 
 
 Clone the repository and install all the necessary dependencies
 
+[Templating](https://mozilla.github.io/nunjucks/templating.html)
+
+
 ```sh
 $ git clone https://github.com/ckhandla94/html-template-builder.git
 $ cd html-template-builder
