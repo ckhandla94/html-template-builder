@@ -1,41 +1,24 @@
 module.exports = {
-	"title" : "Home Page",
-	"slides" : [
+	"services" : [
 		{
-			"title" : "Bring water to the childrens",
-			"content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.",
-			"raised" : "$56 880",
-			"goal" : " $70 000",
+			"title" : "Blog",
+			"image" : "images/service-1.jpg",
 		},
 		{
-			"title" : "Bring water to the childrens",
-			"content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.",
-			"raised" : "$56 880",
-			"goal" : " $70 000",
+			"title" : "Website",
+			"image" : "images/service-2.jpg",
 		},
 		{
-			"title" : "Bring water to the childrens",
-			"content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.",
-			"raised" : "$56 880",
-			"goal" : " $70 000",
+			"title" : "E-commerce",
+			"image" : "images/service-3.jpg",
 		},
 		{
-			"title" : "Bring water to the childrens",
-			"content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.",
-			"raised" : "$56 880",
-			"goal" : " $70 000",
+			"title" : "Lead Page",
+			"image" : "images/service-4.jpg",
 		},
 		{
-			"title" : "Bring water to the childrens",
-			"content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.",
-			"raised" : "$56 880",
-			"goal" : " $70 000",
+			"title" : "Mobile Application",
+			"image" : "images/service-5.jpg",
 		},
-		{
-			"title" : "Bring water to the childrens",
-			"content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.",
-			"raised" : "$56 880",
-			"goal" : " $70 000",
-		}
 	]
 }

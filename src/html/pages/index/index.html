@@ -11,86 +11,158 @@
 
 {% block content %}
 
-    <div class="our-causes">
+    <div class="banner">
         <div class="container">
             <div class="row">
-                <div class="coL-12">
-                    <div class="section-heading">
-                        <h2 class="entry-title">Our Causes</h2>
-                    </div><!-- .section-heading -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-
-            <div class="row">
-                <div class="owl-carousel owl-theme">
-                    <div> Your Content </div>
-                    <div> Your Content 1 </div>
-                    <div> Your Content 2</div>
-                    <div> Your Content 3</div>
-                    <div> Your Content 4</div>
-                    <div> Your Content 5</div>
-                    <div> Your Content 6</div>
+                <div class="col-sm-5 d-flex">
+                    <div class="banner-heading  align-self-center">
+                        <h3 class="entry-title">Build online present</h3>
+                        <h1 class="entry-title">Moments</h1>
+                    </div>
                 </div>
 
-
-                <div class="col-12">
-                    <div class="swiper-container causes-slider">
-                        <div class="swiper-wrapper">
-                           
-                            {% for slide in slides %}
-
-
-                            <div class="swiper-slide">
-                                <div class="cause-wrap">
-                                    <figure class="m-0">
-                                        <img src="images/cause-1.jpg" alt="">
-
-                                        <div class="figure-overlay d-flex justify-content-center align-items-center position-absolute w-100 h-100">
-                                            <a href="#" class="btn gradient-bg mr-2">Donate Now</a>
-                                        </div><!-- .figure-overlay -->
-                                    </figure>
-
-                                    <div class="cause-content-wrap">
-                                        <header class="entry-header d-flex flex-wrap align-items-center">
-                                            <h3 class="entry-title w-100 m-0"><a href="#">{{ slide.title }}</a></h3>
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <p class="m-0">{{ slide.content }}</p>
-                                        </div><!-- .entry-content -->
-
-                                        <div class="fund-raised w-100">
-                                            <div class="fund-raised-bar-1 barfiller">
-                                                <div class="tipWrap">
-                                                    <span class="tip"></span>
-                                                </div><!-- .tipWrap -->
-
-                                                <span class="fill" data-percentage="83"></span>
-                                            </div><!-- .fund-raised-bar -->
-
-                                            <div class="fund-raised-details d-flex flex-wrap justify-content-between align-items-center">
-                                                <div class="fund-raised-total mt-4">
-                                                    Raised: {{ slide.raised }}
-                                                </div><!-- .fund-raised-total -->
-
-                                                <div class="fund-raised-goal mt-4">
-                                                    Goal: {{slide.goal }}
-                                                </div><!-- .fund-raised-goal -->
-                                            </div><!-- .fund-raised-details -->
-                                        </div><!-- .fund-raised -->
-                                    </div><!-- .cause-content-wrap -->
-                                </div><!-- .cause-wrap -->
-                            </div><!-- .swiper-slide -->
-
-                            {% endfor %}
-                           
-                        </div><!-- .swiper-wrapper -->
-
-                
+                <div class="col-sm-7">
+                    <div class="banner-image">
+                        <img src="{{ assets('images/home-banner.jpg') }}">
                     </div>
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </div><!-- .our-causes -->
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2 >Services</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="serivce-list">
+                <div class="row">
+                    {% for service in services %}
+                    <div class="col-xs-12 service-item col-sm">
+                        <div class="service-image">
+                            <img src="{{assets(service.image)}}">
+                        </div>
+                        <h3 class="title">{{service.title}}</h3>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section home-image-section section-1">
+        <div class="container">
+        <div class="inner-container">
+            <div class="row">
+                <div class="col-sm-5 align-self-center">
+                    <div class="image">
+                        <img src="{{assets('images/i.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-sm-7 content align-self-center">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="section home-image-section section-2">
+        <div class="container">
+        <div class="inner-container">
+             <div class="section-title">
+                <h2>Seller & Users</h2>
+                <p>Both can have ane mobil app with finest backend</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 align-self-center">
+                    <div class="image">
+                        <img src="{{assets('images/hero.jpg')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="section home-image-section section-3">
+        <div class="container">
+        <div class="inner-container">
+            <div class="section-title">
+                <h2>Website</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 align-self-center">
+                    <div class="image">
+                        <img src="{{assets('images/i.jpg')}}">
+                    </div>
+                </div>
+                <div class="col-sm-7 content align-self-center">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="section home-image-section section-4">
+        <div class="container">
+        <div class="inner-container">
+            <div class="row">
+                 <div class="col-sm-7 content align-self-center">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
+                    </ul>
+                </div>
+                <div class="col-sm-5 align-self-center">
+                    <div class="image">
+                        <img src="{{assets('images/i.jpg')}}">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+    </div>
+   
 
 {% endblock %}

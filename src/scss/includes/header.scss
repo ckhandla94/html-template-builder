@@ -1,0 +1,17 @@
+.site-branding {
+	img{
+		max-width: 200px;
+	}
+}
+.navbar-nav {
+	.nav-link {
+	    color: #333;
+	    padding: 10px 15px;
+	    margin-left: 10px;
+	    text-transform: uppercase;
+	    font-weight: 400;
+	    .nav-icon {
+		    margin-right: 10px;
+		}
+	}
+}

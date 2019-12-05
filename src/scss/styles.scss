@@ -1,9 +1,55 @@
 @import 'var';
+
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
+
 @import 'bootstrap/scss/bootstrap';
 
 @import './includes/font-awesome';
 @import './includes/elegant-fonts';
 @import './includes/themify-icons';
 @import './includes/swiper';
+@import './includes/header';
+@import './includes/footer';
 
-@import 'owl.carousel/dist/assets/owl.carousel.css';
+//@import 'owl.carousel/dist/assets/owl.carousel.css';
+
+
+body{
+	color: $boday_color;
+	font-size: 16px;
+	font-family: "Lexend Deca";
+}
+
+a{
+	color: $boday_color;
+}
+
+h1,h2,h3,h4,h5,h6{
+	text-transform: uppercase;
+}
+
+.section{
+	padding-top:50px;
+	padding-bottom:50px;
+	.section-title{
+		text-align: center;
+		margin-bottom: 30px;
+		h2{
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+.form-control {
+    border-radius: 0 !important;
+}
+.btn{
+	border-radius: 0 !important;
+	text-transform: uppercase;
+	font-weight: 300;
+	.btn-primary {
+	   	background-color: $primary;
+	   	border-color: $primary_text;
+	}
+}

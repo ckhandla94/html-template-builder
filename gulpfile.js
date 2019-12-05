@@ -41,6 +41,7 @@ function getDataForFile(file) {
 
    
     var default_data = {
+        site_name : "Cadau",
         page_name : file,
         assets: function(path) {
             return "assets/" + path;

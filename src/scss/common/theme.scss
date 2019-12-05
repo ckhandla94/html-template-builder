@@ -65,8 +65,8 @@
 // Defining colors ===========================================
 
 $theme-map: (
-  blue: (
-    primary: #0e519e,
+  default: (
+    primary: #604298,
     primaryText: #fff,
 
     secondary: #a0ce5c,
@@ -95,71 +95,6 @@ $theme-map: (
 
     grayLight: #f0f5f7,
     grayLightText: #000
-  ),
-  dark-blue: (
-    primary: #053a58,
-    primaryText: #fff,
-
-    secondary: #09a9b9,
-    secondaryText: #fff,
-
-    warn: #ff0000,
-    warnText: #fff,
-
-    third: #1fd9e6,
-    thirdText: #fff,
-
-    danger : #a94442,
-    dangerText: #fff,
-
-    success : #3c763d,
-    successText: #fff,
-
-    warning : #8a6d3b,
-    warningText: #fff,
-
-    grayDark: #303030,
-    grayDarkText: #bfbfbf,
-
-    grayNormal: #758690,
-    grayNormalText: #fff,
-
-    grayLight: #f0f5f7,
-    grayLightText: #000
-
-  ),
-
-  dark-red: (
-    primary: #ff0000,
-    primaryText: #fff,
-
-    secondary: #09a9b9,
-    secondaryText: #fff,
-
-    warn: #ff0000,
-    warnText: #fff,
-
-    third: #1fd9e6,
-    thirdText: #fff,
-
-    danger : #a94442,
-    dangerText: #fff,
-
-    success : #3c763d,
-    successText: #fff,
-
-    warning : #8a6d3b,
-    warningText: #fff,
-
-    grayDark: #303030,
-    grayDarkText: #bfbfbf,
-
-    grayNormal: #758690,
-    grayNormalText: #fff,
-
-    grayLight: #f0f5f7,
-    grayLightText: #000
-
   )
 );
 

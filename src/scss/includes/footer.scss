@@ -1,0 +1,42 @@
+@import 'var';
+
+.site-footer{
+	.foot-logo {
+		img{
+			max-width: 200px;
+		}
+	}
+	.footer-nav{
+		list-style: none;
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+	.footer-bar{
+		margin-top: 20px;
+		border-top: 1px solid $gray_light;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		line-height: 1.5;
+	}
+
+	.social-icons{
+		list-style: none;
+		display: flex;
+		flex-direction:row;
+		li{
+			a{
+				height: 30px;
+				width: 30px;
+				font-size: 16px;
+				line-height: 30px;
+				margin-left: 10px;
+			    display: block;
+			    text-align: center;
+			}
+		}
+	}
+}
+
+.news-latter{
+	margin-bottom: 100px;
+}
