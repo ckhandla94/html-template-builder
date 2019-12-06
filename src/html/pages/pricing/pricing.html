@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="page-header section gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 text-center offset-sm-2 ">
+                   <p class="h4">All projects on your Starter plan comes with Free Staging. Upgrade to a paid site plan to connect your custom domain and unlock other features.</p>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pricing-section">
+        <div class="container">
+            <div class="pricing-container">
+               
+                {% for service in pricing %}
+                    <div class="pricing-item">
+                        <div class="col">
+                            <div class="title">
+                                <div class="service-image">
+                                    <img src="{{assets(service.image)}}">
+                                </div>
+                                <h3 class="title">{{service.title}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

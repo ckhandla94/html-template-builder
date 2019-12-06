@@ -31,12 +31,18 @@ function noop() {
 function getDataForFile(file) {
     var data = {};
     var file = path.parse(file.relative).name;
+
     try {
         data = JSON.parse(fs.readFileSync(path.join('./src/html/pages', file + ".json")));
     } catch (err) {
+
+
+    
         try {
-            data = require('./src/html/pages/' + file);
-        } catch (err) {}
+            data = require('./src/html/pages/' + file+"/"+ file);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
    
