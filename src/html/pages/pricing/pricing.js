@@ -1,18 +1,15 @@
 module.exports = {
     "pricing": [{
         "title": "Blog",
-        "image": "images/service-1.jpg",
+        "image": "images/Blog.png",
     }, {
         "title": "Website",
-        "image": "images/service-2.jpg",
+        "image": "images/Website.png",
     }, {
         "title": "E-commerce",
-        "image": "images/service-3.jpg",
+        "image": "images/E-Commerce.png",
     }, {
         "title": "Lead Page",
-        "image": "images/service-4.jpg",
-    }, {
-        "title": "Mobile Application",
-        "image": "images/service-5.jpg",
-    }, ]
+        "image": "images/lead-page.png",
+    }]
 }

@@ -1,0 +1,170 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="section ecommerce-banner-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 align-self-center">
+                   <p class="h4">PINPOINT BY CADAU</p>
+                   <p> Close the loop between digital media and physical worlds with data-driven media planning, activation, and measurement built on the industry's leading location platforrn.</p>
+                </div> 
+                <div class="col-sm-6">
+                    <div class="banner-image text-center">
+                        <img src="{{ assets('images/BANNER TEMPLATE.jpg') }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section flow-section">
+        <div class="container">
+            <div class="servies">
+               <div class="row middle-line">
+                   <div class="col-12 col-sm">
+                        <span class="box"> <span><img src="{{ assets('images/e-s-1.png') }}"> Caption</span> </span>
+                   </div>
+                   <div class="col-12 col-sm">
+                        <span class="box"> <span> <img src="{{ assets('images/e-s-2.png') }}"> Caption </span></span>
+                   </div>
+                   <div class="col-12 col-sm">
+                        <span class="box">  <span><img src="{{ assets('images/e-s-3.png') }}"> Caption</span> </span>
+                   </div>
+                   <div class="col-12 col-sm">
+                        <span class="box">  <span><img src="{{ assets('images/e-s-4.png') }}"> Caption </span></span>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="section ecommerce-image-section section-1">
+        <div class="container">
+            <div class="inner-container">
+               
+                <div class="row">
+                    <div class="col-sm-6 content align-self-center">
+
+                        <h2>WHY CADAU ?</h2>
+                        <h4> Advantages over leading services providers</h4>
+                 
+                        <ul>
+                            <li>Easy to use and Setup </li>
+                            <li>Less Expensive than Shopify, and all other competitors. </li>
+                            <li>Security and Reliability </li>
+                            <li>Blazing Fast </li>
+                            <li>SEO Friendly </li>
+                            <li>Innovative Design Tools </li>
+                            <li>Easy to Integrate Payment Gateways </li>
+                            <li>App Integration with no Transaction Fees!</li>
+                        </ul>
+                    </div>
+
+                     <div class="col-sm-6 align-self-center">
+                        <div class="image">
+                            <img src="{{assets('images/IMAGE.jpg')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section ecommerce-image-section section-1">
+        <div class="container">
+            <div class="inner-container">
+               
+                <div class="row">
+                    <div class="col-sm-6 mobile-app-section d-flex justify-content-center">
+                        <div class="image align-self-center ">
+                            <img src="{{assets('images/ECommerce.png')}}">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 content pt-5 pb-5 pl-5 align-self-center">
+                        <h2>SELL YOUR PRODUCTS ON MOBILE APP</h2>
+                        <h4>Advantages over leading services providers</h4>
+                        <ul>
+                            <li> Easy to use and Setup </li>
+                            <li> Less Expensive than Shopify, and all other competitors. </li>
+                            <li> Security and Reliability </li>
+                            <li> Blazing Fast</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section ecommerce-image-section section-1">
+        <div class="container">
+            <div class="inner-container">
+               
+                <div class="row">
+                    <div class="pt-5 pb-5 col-sm-6 content align-self-center">
+
+                        <h2>QUICK DELIVERY INLOCAL MARKET</h2>
+                        <h4>Advantages over leading services providers</h4>
+ 
+                        <ul>
+                            <li>Easy to use and Setup </li>
+                            <li>Less Expensive than Shopify, and all other competitors. </li>
+                            <li>Security and Reliability </li>
+                            <li>Blazing Fast</li>
+                        </ul>
+                    </div>
+
+                     <div class="col-sm-6 quick-delivery-section pt-5 pb-5 d-flex justify-content-center">
+                        <div class="image align-self-center">
+                            <img src="{{assets('images/qUICKDELIVERY IMAGE.png')}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section porduct-section">
+        <div class="container">
+            <div class="porduct-container row">
+                {% for porduct in porducts %}
+                    <div class="porduct-item mb-3 col-sm-12 col-lg-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{assets(porduct.image)}}" alt="{{porduct.price}}">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                     <div class="row">
+                                        <div class="col">
+                                            {{porduct.title}}
+                                        </div>
+                                        <div class="col-auto">
+                                            {{porduct.price}}
+                                        </div>
+                                    </div>
+                                </h5>
+                                <p class="card-text text-muted"><small>{{porduct.description}}</small></p>
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="text-muted">{{porduct.sales}}</span>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Preview</a> 
+                                        <a href="#" class="btn btn-sm btn-primary add-to-cart btn-icon"><img width="16px;" src="{{assets('images/shopping-cart.svg')}}"></a> 
+                                    </div>
+                                </div>       
+                            </div>
+                        </div>                              
+                    </div>
+                {% endfor %}
+            </div>
+
+              
+        </div>
+    </div>
+    
+    {% include "partial/footer-bottom.html" ignore missing %}
+
+{% endblock %}

@@ -42,16 +42,68 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-
+.card{
+	@extend .box-shadow;
+}
 .form-control {
     border-radius: 0 !important;
 }
 .btn{
-	border-radius: 0 !important;
+	border-radius: 0;
 	text-transform: uppercase;
 	font-weight: 300;
 	.btn-primary {
 	   	background-color: $primary;
-	   	border-color: $primary_text;
+	   	color: $primary_text;
+	}
+}
+
+.buttotm-section{
+	position: relative;
+	margin-bottom: 150px;
+	background-color: $primary;
+	color: $primary_text;
+	.btn{
+		padding: 10px 25px;
+		border-radius: 10px !important;
+		&:after{
+			transform: rotate(-90deg);
+		}
+		&:hover{
+			color: $primary !important;
+			border-color: $primary !important;
+		}
+	}
+	&:after{
+	    content: "";
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    background-image: url(/assets/images/PATTERN.png);
+	    display: block;
+	    height: 150px;
+	    width: 100%;
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	    background-position: bottom center;
+	    position: absolute;
+	    top: 100%;
+	}
+}
+
+.content{
+	ul{
+		padding-left: 20px;
+		li {
+		    list-style: none;
+		    position: relative;
+		    line-height: 1.5;
+		    &:before{
+		    	position: absolute;
+		    	content: "-";
+		    	line-height: 1.5;
+		    	left: -20px;
+		    }
+		}
 	}
 }

@@ -4,8 +4,10 @@
 .serivce-list{
 	.service-item{
 		text-align: center;
-		.service-image{
-			
+		.service-image {
+			img{
+				width: 150px;
+			}
 		}
 		.title{
 			font-size: 16px;
@@ -15,7 +17,7 @@
 }
 .image{
 	img{
-		max-width: 100%;
+		width: 100%;
 	}
 }
 .banner-image{
@@ -34,6 +36,10 @@
 			background: rgb(102,71,142);
 			background: linear-gradient(90deg, rgba(#66478e,1) 0%, rgba(#66478e,1) 17%, rgba(#dec2ff,1) 100%);
 		}
+		.image img {
+		    width: 100%;
+		    max-width: 280px;
+		}
 	}
 	&.section-2{
 		.inner-container{
@@ -46,6 +52,9 @@
 			background: rgb(102,71,142);
 			background: linear-gradient(90deg, rgba(#b5b0f7,1) 0%, rgba(#b5b0f7,1) 17%, rgba(#5a57a6,1) 100%);
 		}
+		.image{
+			margin-left: -150px;
+		}
 	}
 	&.section-4{
 		.inner-container{
@@ -56,20 +65,5 @@
 	.image{
 		text-align: center;
 	}
-	.content{
-		ul{
-			padding-left: 20px;
-			li {
-			    list-style: none;
-			    position: relative;
-			    line-height: 1.5;
-			    &:before{
-			    	position: absolute;
-			    	content: "-";
-			    	line-height: 1.5;
-			    	left: -20px;
-			    }
-			}
-		}
-	}
+	
 }

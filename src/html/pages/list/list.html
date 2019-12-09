@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="page-header section gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                   <p class="h4">PROFESSIONAL EVENT THEMES</p>
+                </div> 
+
+                <div class="col-sm-4">
+                    <div class="input-group search-control">
+                      <input type="text" class="form-control" placeholder="Search within this category">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><img width="24px" src="{{assets('images/search-icon.svg')}}"></button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section porduct-section">
+        <div class="container">
+            <div class="servies">
+                <div class=" d-flex justify-content-center mb-5"> 
+                    {% for service in services %}
+                        <a href="#" class="ml-3 mr-3 rounded btn btn-outline-dark align-items-center d-flex">
+                            <img width="32px" src="{{assets(service.image)}}"> <span class="ml-3">{{service.title}}</span>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 p-0 ">
+                    <div class="side-bar box-shadow">
+                        <h4 class="p-3">POPULAR DESIGNS</h4>
+                        <div class="list-group list-group-flush">
+                          <a href="#" class="list-group-item list-group-item-action active"> Portfolios </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Photography </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Online Stores </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Blogs & Podcasts </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Local Business </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Events </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Weddings </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Musicians & Bands </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Restaurants </a>
+                          <a href="#" class="list-group-item list-group-item-action "> Personal & CV </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="porduct-container row">
+                        {% for porduct in porducts %}
+                            <div class="porduct-item mb-3 col-sm-12 col-lg-4">
+                                <div class="card">
+                                    <img class="card-img-top" src="{{assets(porduct.image)}}" alt="{{porduct.price}}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                             <div class="row">
+                                                <div class="col">
+                                                    {{porduct.title}}
+                                                </div>
+                                                <div class="col-auto">
+                                                    {{porduct.price}}
+                                                </div>
+                                            </div>
+                                        </h5>
+                                        <p class="card-text text-muted"><small>{{porduct.description}}</small></p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <span class="text-muted">{{porduct.sales}}</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" class="btn btn-sm btn-outline-primary">Preview</a> 
+                                                <a href="#" class="btn btn-sm btn-primary add-to-cart btn-icon"><img width="16px;" src="{{assets('images/shopping-cart.svg')}}"></a> 
+                                            </div>
+                                        </div>       
+                                    </div>
+                                </div>                              
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% include "partial/footer-bottom.html" ignore missing %}
+
+{% endblock %}

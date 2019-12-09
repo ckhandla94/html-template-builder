@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-
     <div class="banner">
         <div class="container">
             <div class="row">
@@ -43,10 +42,12 @@
                 <div class="row">
                     {% for service in services %}
                     <div class="col-xs-12 service-item col-sm">
-                        <div class="service-image">
-                            <img src="{{assets(service.image)}}">
-                        </div>
-                        <h3 class="title">{{service.title}}</h3>
+                        <a href="{{service.url}}">
+                            <div class="service-image">
+                                <img src="{{assets(service.image)}}">
+                            </div>
+                            <h3 class="title">{{service.title}}</h3>
+                        </a>
                     </div>
                     {% endfor %}
                 </div>
@@ -62,7 +63,7 @@
             <div class="row">
                 <div class="col-sm-5 align-self-center">
                     <div class="image">
-                        <img src="{{assets('images/i.jpg')}}">
+                        <img src="{{assets('images/BANNER TEMPLATE.jpg')}}">
                     </div>
                 </div>
                 <div class="col-sm-7 content align-self-center">
@@ -95,7 +96,7 @@
             <div class="row">
                 <div class="col-sm-12 align-self-center">
                     <div class="image">
-                        <img src="{{assets('images/hero.jpg')}}">
+                        <img src="{{assets('images/ECommerce.png')}}">
                     </div>
                 </div>
             </div>
@@ -115,7 +116,7 @@
             <div class="row">
                 <div class="col-sm-5 align-self-center">
                     <div class="image">
-                        <img src="{{assets('images/i.jpg')}}">
+                        <img src="{{assets('images/Collage.png')}}">
                     </div>
                 </div>
                 <div class="col-sm-7 content align-self-center">
@@ -155,7 +156,7 @@
                 </div>
                 <div class="col-sm-5 align-self-center">
                     <div class="image">
-                        <img src="{{assets('images/i.jpg')}}">
+                        <img src="{{assets('images/Social.jpg')}}">
                     </div>
                 </div>
                

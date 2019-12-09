@@ -35,13 +35,10 @@ function getDataForFile(file) {
     try {
         data = JSON.parse(fs.readFileSync(path.join('./src/html/pages', file + ".json")));
     } catch (err) {
-
-
-    
         try {
             data = require('./src/html/pages/' + file+"/"+ file);
         } catch (err) {
-            console.log(err);
+            //console.log(err);
         }
     }
 

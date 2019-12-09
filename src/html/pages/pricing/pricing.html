@@ -17,12 +17,62 @@
                
                 {% for service in pricing %}
                     <div class="pricing-item">
-                        <div class="col">
-                            <div class="title">
-                                <div class="service-image">
-                                    <img src="{{assets(service.image)}}">
+                        <div class="background box-shadow"></div>
+                        <div class="row">
+                            <div class="col bg-transprant">
+                                <div class="title">
+                                    <div class="service-image">
+                                        <img src="{{assets(service.image)}}">
+                                    </div>
+                                    <h3>{{service.title}}</h3>
                                 </div>
-                                <h3 class="title">{{service.title}}</h3>
+                                <div class="server-details">
+                                    <ul>
+                                        <li>Basic Website Metrics</li>
+                                        <li>Mobile-optimized Websites</li>
+                                        <li>Templates to Fit Every</li>
+                                        <li>Need from Blogs to Portfolios</li>
+                                        <li>Contributors</li>
+                                        <li>Complete</li>
+                                        <li>Customization with</li>
+                                        <li>CSS and JavaScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col pricing-data bg-white">
+                                <div class="title">
+                                    <h3>Personal</h3>
+                                    <p>Its free for personal use or dummy lines</p>
+                                </div>
+                                <ul>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude inactive"></span></li>
+                                    <li><span class="incliude inactive"></span></li>
+                                    <li><span class="incliude inactive"></span></li>
+                                    <li><span class="incliude inactive"></span></li>
+                                    <li><span class="incliude inactive"></span></li>
+                                    <li><span class="incliude inactive"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                </ul>
+                                <div class="buttons"><a class="btn btn-primary" href="#">Get for Free</a></div>
+                            </div>  
+
+                            <div class="col pricing-data bg-white">
+                                <div class="title">
+                                    <h3>Commercial <br> 40$ <small>Monthly</small></h3>
+                                    <p>Save $96 annually</p>
+                                </div>
+                                <ul>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                    <li><span class="incliude active"></span></li>
+                                </ul>
+                                <div class="buttons"><a class="btn btn-primary" href="#">Buy Now</a></div>
                             </div>
                         </div>
                     </div>
@@ -30,5 +80,8 @@
             </div>
         </div>
     </div>
+  
+    {% include "partial/footer-bottom.html" ignore missing %}
+
 
 {% endblock %}

@@ -1,0 +1,50 @@
+@import 'var';
+
+.ecommerce-banner-section{
+	background-color: #DEC2FF;
+	color: #fff;
+}
+.mobile-app-section{
+	background-color: #D7E8FE;
+}
+.quick-delivery-section{
+	background-color: #000;
+}
+.porduct-section{
+	background-color: #2D5EC1;
+}
+
+.middle-line{
+	position: relative;
+	&:before{
+		position: absolute;
+		top: 50%;
+		left: 150px;
+		right: 150px;
+		background-color: $gray_light;
+		height: 1px;
+		content: "";
+	}
+
+	.box{
+		background-color: #fff;
+		z-index: 1;
+		border: 1px solid $gray_light;
+		height: 150px;
+	    width: 150px;
+	    margin: auto;
+	    border-radius: 150px;
+	    overflow: hidden;
+	    display: flex;
+	    align-items: center;
+	    align-content: center;
+	    span{
+	    	text-align: center;
+	    	margin: auto;
+	    	img{
+	    		display: block;
+	    		margin: 0 auto 10px;
+	    	}
+	    }
+	}
+}
