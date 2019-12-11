@@ -1,30 +1,38 @@
 <header class="site-header">
     <div class="nav-bar">
         <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                    <div class="site-branding d-flex align-items-center">
-                       <a class="d-block" href="index.html" rel="home"><img class="d-block" src="{{assets('images/logo.png')}}" alt="logo"></a>
-                    </div><!-- .site-branding -->
-
-                    <nav class="site-navigation d-flex justify-content-end align-items-center">
-                        <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="about.html">Tour</a></li>
-                            <li class="nav-item"><a class="nav-link" href="list.html">Templates</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="news.html">Get Started</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa fa fa-user-o nav-icon"></i>Login</a></li>
-                        </ul>
-                    </nav><!-- .site-navigation -->
-
-                    <div class="hamburger-menu d-lg-none">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+              <nav class="site-navigation navbar navbar-light navbar-expand-lg ">
+                    <div class="site-branding navbar-brand">
+                       <a class="d-block wow zoomIn" href="index.html" rel="home"><img class="d-block" src="{{assets('images/logo.png')}}" alt="logo"></a>
                     </div>
-                </div>
-            </div>
+
+                    <button type="button" class="navbar-toggler wow zoomIn" data-toggle="collapse" data-target="#mainNavbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class=" collapse navbar-collapse" id="mainNavbarCollapse">
+
+                        <ul class="ml-auto d-flex flex-column flex-lg-row justify-content-lg-end align-content-center navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle wow zoomIn" href="" id="tourMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Tour
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="tourMenuLink">
+                                  <a class="dropdown-item" href="blog.html">Blog</a>
+                                  <a class="dropdown-item" href="website.html">Website</a>
+                                  <a class="dropdown-item" href="ecommerce.html">E-commerce</a>
+                                  <a class="dropdown-item" href="lead-page.html">Lead Page</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item wow zoomIn"><a class="nav-link" href="list.html">Templates</a></li>
+                            <li class="nav-item wow zoomIn"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                            <li class="nav-item wow zoomIn"><a class="nav-link" href="#">Get Started</a></li>
+                            <li class="nav-item wow zoomIn"><a class="nav-link" href="#"><i class="fa fa fa-user-o nav-icon"></i>Login</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- .site-navigation -->
+          
         </div>
     </div>
 </header>

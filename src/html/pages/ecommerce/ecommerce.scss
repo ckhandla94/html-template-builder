@@ -1,18 +1,55 @@
 @import 'var';
 
+.ecommerce-image-section{
+	.container{
+		@include respond(md) {
+			overflow: hidden;
+		}
+
+
+	}
+}
+
+
 .ecommerce-banner-section{
 	background-color: #DEC2FF;
 	color: #fff;
+
+	.banner-image{
+		@include respond(md) {
+			padding-top: 30px; 	
+		}
+		img{
+			@include respond(md) {
+				width: 100%;
+			}
+		}	
+	}
 }
 .mobile-app-section{
 	background-color: #D7E8FE;
+	.image{
+		img{
+			width: 100%;
+		}	
+	}
 }
+
+.image{
+	img{
+		@include respond(md) {
+			width: 100%;
+		}
+	}	
+}
+
 .quick-delivery-section{
 	background-color: #000;
 }
 .porduct-section{
 	background-color: #2D5EC1;
 }
+
 
 .middle-line{
 	position: relative;
@@ -24,6 +61,9 @@
 		background-color: $gray_light;
 		height: 1px;
 		content: "";
+		@include respond(lg) {
+			display: none;
+		}
 	}
 
 	.box{

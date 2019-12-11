@@ -13,5 +13,15 @@
 }
 
 .search-control{
+	.form-control{
+		border: 2px solid #66468f;
+    	height: 40px
+	}
+}
 
+.category-dropdown{
+	.dropdown-menu.show {
+	    display: block;
+	    right: 30px;
+	}
 }

@@ -1,6 +1,9 @@
 .site-branding {
 	img{
 		max-width: 200px;
+		@include respond(md) {
+			max-width: 170px;
+		}
 	}
 }
 .navbar-nav {
@@ -10,8 +13,60 @@
 	    margin-left: 10px;
 	    text-transform: uppercase;
 	    font-weight: 400;
+	    transition: all 0.5s;
 	    .nav-icon {
 		    margin-right: 10px;
 		}
+
+		&:hover{
+			color: $primary;
+		}
 	}
+
+
+
+	@include respond-to(lg) {
+
+		.dropdown-menu{
+	 		//@extend .box-shadow;
+		 	position: absolute;
+		}
+		.dropdown{
+			.dropdown-menu {
+				margin: 0;
+			}
+			&:hover > .dropdown-menu {
+			  	display: block;
+			  
+			}
+			.dropdown-item {
+				&:hover{	  			
+					background-color: $primary;
+					color: $primary_text;
+		  		}
+		  		&:focus{
+		  			color: #fff;
+		  		}
+		  	} 
+		}
+	}
+
 }
+
+.navbar-collapse {
+	// @include respond(md) {
+	// //    position: absolute;
+	// }
+	// &.collapsing .navbar-nav,
+	// &.show .navbar-nav {
+	// 	position: absolute;
+	//     left: 0;
+	//     right: 0;
+	//     top: 62px;
+	//     z-index: 99999;
+	//     background: #FFF;
+	//     box-shadow: 0 4px 4px 0px rgba(0,0,0,0.3);
+		
+	// }
+}
+

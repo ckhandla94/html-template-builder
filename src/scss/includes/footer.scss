@@ -10,6 +10,7 @@
 		list-style: none;
 		text-transform: uppercase;
 		font-weight: 300;
+		padding: 0;
 	}
 	.footer-bar{
 		margin-top: 20px;
@@ -23,6 +24,10 @@
 		list-style: none;
 		display: flex;
 		flex-direction:row;
+		padding: 0;
+		@include respond(md) {
+			margin-top: 15px;
+		}
 		li{
 			a{
 				height: 30px;
@@ -32,6 +37,10 @@
 				margin-left: 10px;
 			    display: block;
 			    text-align: center;
+			    @include respond(md) {
+					margin-left: 0px;
+			    	margin-right: 10px;
+			    }
 			}
 		}
 	}
@@ -39,4 +48,27 @@
 
 .news-latter{
 	margin-bottom: 100px;
+	@include respond(md) {
+		margin-bottom: 20px;
+	}
+	.form-control {
+		@include respond(md) {
+			width: 100%;
+			border-radius: 0 !important;
+			margin-bottom: 15px;
+		}
+	}
+	.input-group-append{
+		@include respond(md) {
+			width: 100%;
+		}
+	}
+
+	.btn {
+		@include respond(md) {
+			width: 100%;
+			border-radius: 0 !important;
+			margin: 0 auto;
+		}
+	}
 }

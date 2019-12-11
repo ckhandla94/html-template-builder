@@ -116,7 +116,7 @@ gulp.task('sass', ['clean'], function() {
 
 gulp.task('js', ['clean'], function() {
     var ignore = [
-        'popper.js'
+        //'popper.js'
     ];
 
     var bootstrap = concat({

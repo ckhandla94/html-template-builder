@@ -2,10 +2,7 @@
 
 {% block after_script %}
 <script>
-    console.log(123);
-    $(document).ready(function(){
-        $('.owl-carousel').owlCarousel();
-    });
+   
 </script>
 {% endblock %}
 
@@ -14,14 +11,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-5 d-flex">
-                    <div class="banner-heading  align-self-center">
-                        <h3 class="entry-title">Build online present</h3>
+                    <div class="banner-heading wow fadeInLeft align-self-center">
+                        <h3 class="entry-title ">Build online present</h3>
                         <h1 class="entry-title">Moments</h1>
                     </div>
                 </div>
 
                 <div class="col-sm-7">
-                    <div class="banner-image">
+                    <div class="banner-image wow fadeInRight">
                         <img src="{{ assets('images/home-banner.jpg') }}">
                     </div>
                 </div>
@@ -35,13 +32,13 @@
     <div class="section">
         <div class="container">
             <div class="section-title">
-                <h2 >Services</h2>
-                <p>Lorem ipsum dolor sit amet</p>
+                <h2 class="wow zoomIn">Services</h2>
+                <p class="wow zoomIn">Lorem ipsum dolor sit amet</p>
             </div>
             <div class="serivce-list">
                 <div class="row">
                     {% for service in services %}
-                    <div class="col-xs-12 service-item col-sm">
+                    <div class="col-xs-12 service-item col-sm wow zoomIn">
                         <a href="{{service.url}}">
                             <div class="service-image">
                                 <img src="{{assets(service.image)}}">
@@ -57,16 +54,16 @@
 
 
 
-    <div class="section home-image-section section-1">
+    <div class="section home-image-section section-1 wow zoomIn">
         <div class="container">
         <div class="inner-container">
             <div class="row">
                 <div class="col-sm-5 align-self-center">
-                    <div class="image">
+                    <div class="image wow fadeInLeft" data-wow-delay="0.5s">
                         <img src="{{assets('images/BANNER TEMPLATE.jpg')}}">
                     </div>
                 </div>
-                <div class="col-sm-7 content align-self-center">
+                <div class="col-sm-7 content align-self-center wow fadeInRight" data-wow-delay="0.5s">
                     <h2>Lorem ipsum dolor sit amet</h2>
                     <h4>Lorem ipsum dolor sit amet</h4>
                     <ul>
@@ -86,14 +83,14 @@
     </div>
 
 
-    <div class="section home-image-section section-2">
+    <div class="section home-image-section section-2 wow zoomIn">
         <div class="container">
         <div class="inner-container">
-             <div class="section-title">
+             <div class="section-title wow fadeInUp" data-wow-delay="0.5s">
                 <h2>Seller & Users</h2>
                 <p>Both can have ane mobil app with finest backend</p>
             </div>
-            <div class="row">
+            <div class="row wow fadeInUp" data-wow-delay="0.5s">
                 <div class="col-sm-12 align-self-center">
                     <div class="image">
                         <img src="{{assets('images/ECommerce.png')}}">
@@ -107,19 +104,20 @@
 
 
 
-    <div class="section home-image-section section-3">
+    <div class="section home-image-section section-3 wow zoomIn">
         <div class="container">
         <div class="inner-container">
-            <div class="section-title">
+            <div class="section-title wow fadeInUp" data-wow-delay="0.5s">
                 <h2>Website</h2>
             </div>
             <div class="row">
-                <div class="col-sm-5 align-self-center">
+                <div class="col-sm-5 align-self-center wow fadeInLeft" data-wow-delay="0.5s">
                     <div class="image">
                         <img src="{{assets('images/Collage.png')}}">
                     </div>
                 </div>
-                <div class="col-sm-7 content align-self-center">
+                <div class="col-sm-7 content align-self-center wow fadeInRight" data-wow-delay="0.5s">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
@@ -136,11 +134,11 @@
         </div>
     </div>
 
-    <div class="section home-image-section section-4">
+    <div class="section home-image-section section-4 wow zoomIn">
         <div class="container">
         <div class="inner-container">
             <div class="row">
-                 <div class="col-sm-7 content align-self-center">
+                 <div class="col-sm-7 content align-self-center wow fadeInLeft" data-wow-delay="0.5s">
                     <h2>Lorem ipsum dolor sit amet</h2>
                     <h4>Lorem ipsum dolor sit amet</h4>
                     <ul>
@@ -154,7 +152,7 @@
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
                     </ul>
                 </div>
-                <div class="col-sm-5 align-self-center">
+                <div class="col-sm-5 align-self-center wow fadeInRight" data-wow-delay="0.5s">
                     <div class="image">
                         <img src="{{assets('images/Social.jpg')}}">
                     </div>

@@ -19,17 +19,36 @@
 	img{
 		width: 100%;
 	}
-}
-.banner-image{
-	img{
-		width: 100%;
+	@include respond(md) {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
+.banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .banner-image{
+		img{
+			width: 100%;
+		}
+	}
+}
+
 .home-image-section{
+	.content{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
 	.inner-container{
 		padding: 50px;
 		margin-left: -50px;
 		margin-right: -50px;
+
+		@include respond(md) {
+		    padding: 35px 15px 15px;
+		    margin-left: -15px;
+		    margin-right: -15px;
+		}
 	}
 	&.section-1{
 		.inner-container{
@@ -54,6 +73,9 @@
 		}
 		.image{
 			margin-left: -150px;
+			@include respond(md) {
+				margin: 0px;
+			}
 		}
 	}
 	&.section-4{

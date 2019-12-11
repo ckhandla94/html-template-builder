@@ -1,14 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div class="section ecommerce-banner-section">
+    <div class="section ecommerce-banner-section wow fadeIn">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 align-self-center">
+                <div class="col-sm-6 align-self-center wow fadeInLeft"  data-wow-delay="0.5s">
                    <p class="h4">PINPOINT BY CADAU</p>
                    <p> Close the loop between digital media and physical worlds with data-driven media planning, activation, and measurement built on the industry's leading location platforrn.</p>
                 </div> 
-                <div class="col-sm-6">
+                <div class="col-sm-6 wow fadeInRight"  data-wow-delay="0.5s">
                     <div class="banner-image text-center">
                         <img src="{{ assets('images/BANNER TEMPLATE.jpg') }}">
                     </div>
@@ -21,17 +21,17 @@
         <div class="container">
             <div class="servies">
                <div class="row middle-line">
-                   <div class="col-12 col-sm">
-                        <span class="box"> <span><img src="{{ assets('images/e-s-1.png') }}"> Caption</span> </span>
+                   <div class="col-12 mb-5 mb-lg-0 col-md-6 col-lg">
+                        <span class="box wow zoomIn"> <span><img src="{{ assets('images/e-s-1.png') }}"> Caption</span> </span>
                    </div>
-                   <div class="col-12 col-sm">
-                        <span class="box"> <span> <img src="{{ assets('images/e-s-2.png') }}"> Caption </span></span>
+                   <div class="col-12 mb-5 mb-lg-0 col-md-6 col-lg">
+                        <span class="box wow zoomIn"> <span> <img src="{{ assets('images/e-s-2.png') }}"> Caption </span></span>
                    </div>
-                   <div class="col-12 col-sm">
-                        <span class="box">  <span><img src="{{ assets('images/e-s-3.png') }}"> Caption</span> </span>
+                   <div class="col-12 mb-5 mb-lg-0 col-md-6 col-lg">
+                        <span class="box wow zoomIn">  <span><img src="{{ assets('images/e-s-3.png') }}"> Caption</span> </span>
                    </div>
-                   <div class="col-12 col-sm">
-                        <span class="box">  <span><img src="{{ assets('images/e-s-4.png') }}"> Caption </span></span>
+                   <div class="col-12 col-sm col-md-6 col-lg">
+                        <span class="box wow zoomIn">  <span><img src="{{ assets('images/e-s-4.png') }}"> Caption </span></span>
                    </div>
                </div>
             </div>
@@ -46,7 +46,7 @@
             <div class="inner-container">
                
                 <div class="row">
-                    <div class="col-sm-6 content align-self-center">
+                    <div class="col-sm-6 content align-self-center wow fadeInLeft" >
 
                         <h2>WHY CADAU ?</h2>
                         <h4> Advantages over leading services providers</h4>
@@ -63,7 +63,7 @@
                         </ul>
                     </div>
 
-                     <div class="col-sm-6 align-self-center">
+                     <div class="col-sm-6 align-self-center wow fadeInRight">
                         <div class="image">
                             <img src="{{assets('images/IMAGE.jpg')}}">
                         </div>
@@ -77,12 +77,12 @@
             <div class="inner-container">
                
                 <div class="row">
-                    <div class="col-sm-6 mobile-app-section d-flex justify-content-center">
+                    <div class="col-sm-6 mobile-app-section d-flex justify-content-center wow fadeInLeft">
                         <div class="image align-self-center ">
                             <img src="{{assets('images/ECommerce.png')}}">
                         </div>
                     </div>
-                    <div class="col-sm-6 content pt-5 pb-5 pl-5 align-self-center">
+                    <div class="col-sm-6 content pt-5 pb-5 pl-5 align-self-center wow fadeInRight">
                         <h2>SELL YOUR PRODUCTS ON MOBILE APP</h2>
                         <h4>Advantages over leading services providers</h4>
                         <ul>
@@ -104,7 +104,7 @@
             <div class="inner-container">
                
                 <div class="row">
-                    <div class="pt-5 pb-5 col-sm-6 content align-self-center">
+                    <div class="pt-5 pb-5 col-sm-6 content align-self-center wow fadeInLeft">
 
                         <h2>QUICK DELIVERY INLOCAL MARKET</h2>
                         <h4>Advantages over leading services providers</h4>
@@ -117,7 +117,7 @@
                         </ul>
                     </div>
 
-                     <div class="col-sm-6 quick-delivery-section pt-5 pb-5 d-flex justify-content-center">
+                     <div class="col-sm-6 quick-delivery-section pt-5 pb-5 d-flex justify-content-center wow fadeInRight">
                         <div class="image align-self-center">
                             <img src="{{assets('images/qUICKDELIVERY IMAGE.png')}}">
                         </div>
@@ -127,11 +127,11 @@
         </div>
     </div>
 
-    <div class="section porduct-section">
+    <div class="section porduct-section wow fadeIn">
         <div class="container">
             <div class="porduct-container row">
                 {% for porduct in porducts %}
-                    <div class="porduct-item mb-3 col-sm-12 col-lg-4">
+                    <div class="porduct-item mb-3 col-sm-12 col-lg-4 wow zoomIn"  data-wow-delay="0.5s">
                         <div class="card">
                             <img class="card-img-top" src="{{assets(porduct.image)}}" alt="{{porduct.price}}">
                             <div class="card-body">
