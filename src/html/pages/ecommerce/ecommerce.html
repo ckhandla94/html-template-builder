@@ -1,5 +1,26 @@
 {% extends "layout.html" %}
 
+{% block after_script %}
+<script>
+
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:4
+            }
+        }
+    })
+   
+</script>
+{% endblock %}
+
+
 {% block content %}
     <div class="section ecommerce-banner-section wow fadeIn">
         <div class="container">
@@ -20,20 +41,36 @@
     <div class="section flow-section">
         <div class="container">
             <div class="servies">
-               <div class="row middle-line">
-                   <div class="col-12 mb-5 mb-lg-0 col-md-6 col-lg">
+               <div class="row middle-line  d-none b-lg-block">
+                   <div class="col-md-6 col-lg">
                         <span class="box wow zoomIn"> <span><img src="{{ assets('images/e-s-1.png') }}"> Caption</span> </span>
                    </div>
-                   <div class="col-12 mb-5 mb-lg-0 col-md-6 col-lg">
+                   <div class="col-md-6 col-lg">
                         <span class="box wow zoomIn"> <span> <img src="{{ assets('images/e-s-2.png') }}"> Caption </span></span>
                    </div>
-                   <div class="col-12 mb-5 mb-lg-0 col-md-6 col-lg">
+                   <div class="col-md-6 col-lg">
                         <span class="box wow zoomIn">  <span><img src="{{ assets('images/e-s-3.png') }}"> Caption</span> </span>
                    </div>
-                   <div class="col-12 col-sm col-md-6 col-lg">
+                   <div class="col-md-6 col-lg">
                         <span class="box wow zoomIn">  <span><img src="{{ assets('images/e-s-4.png') }}"> Caption </span></span>
                    </div>
                </div>
+
+
+                <div class="slider d-block b-lg-none owl-carousel owl-theme">
+                    <div class="item">
+                        <span class="box wow zoomIn"> <span><img src="{{ assets('images/e-s-1.png') }}"> Caption</span> </span>
+                   </div>
+                   <div class="item">
+                        <span class="box wow zoomIn"> <span> <img src="{{ assets('images/e-s-2.png') }}"> Caption </span></span>
+                   </div>
+                   <div class="item">
+                        <span class="box wow zoomIn">  <span><img src="{{ assets('images/e-s-3.png') }}"> Caption</span> </span>
+                   </div>
+                   <div class="item">
+                        <span class="box wow zoomIn">  <span><img src="{{ assets('images/e-s-4.png') }}"> Caption </span></span>
+                   </div>
+                </div>
             </div>
         </div>
     </div>

@@ -50,19 +50,20 @@
 	background-color: #2D5EC1;
 }
 
-
-.middle-line{
-	position: relative;
-	&:before{
-		position: absolute;
-		top: 50%;
-		left: 150px;
-		right: 150px;
-		background-color: $gray_light;
-		height: 1px;
-		content: "";
-		@include respond(lg) {
-			display: none;
+.servies{
+	.middle-line{
+		position: relative;
+		&:before{
+			position: absolute;
+			top: 50%;
+			left: 150px;
+			right: 150px;
+			background-color: $gray_light;
+			height: 1px;
+			content: "";
+			@include respond(lg) {
+				display: none;
+			}
 		}
 	}
 

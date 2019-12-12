@@ -2,6 +2,20 @@
 
 {% block after_script %}
 <script>
+
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:4
+            }
+        }
+    })
    
 </script>
 {% endblock %}
@@ -36,7 +50,7 @@
                 <p class="wow zoomIn">Lorem ipsum dolor sit amet</p>
             </div>
             <div class="serivce-list">
-                <div class="row">
+                <div class="row d-none b-lg-block">
                     {% for service in services %}
                     <div class="col-xs-12 service-item col-sm wow zoomIn">
                         <a href="{{service.url}}">
@@ -48,6 +62,18 @@
                     </div>
                     {% endfor %}
                 </div>
+                <div class="slider d-block b-lg-none owl-carousel owl-theme">
+                    {% for service in services %}
+                    <div class="service-item item wow zoomIn">
+                        <a href="{{service.url}}">
+                            <div class="service-image">
+                                <img src="{{assets(service.image)}}">
+                            </div>
+                            <h3 class="title">{{service.title}}</h3>
+                        </a>
+                    </div>
+                    {% endfor %}
+                 </div>
             </div>
         </div>
     </div>
@@ -65,7 +91,8 @@
                 </div>
                 <div class="col-sm-7 content align-self-center wow fadeInRight" data-wow-delay="0.5s">
                     <h2>Lorem ipsum dolor sit amet</h2>
-                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <h4 class="mb-5">Lorem ipsum dolor sit amet</h4>
+                    <h5 class="mb-5">Lorem ipsum dolor sit amet</h5>
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
@@ -111,12 +138,12 @@
                 <h2>Website</h2>
             </div>
             <div class="row">
-                <div class="col-sm-5 align-self-center wow fadeInLeft" data-wow-delay="0.5s">
+                <div class="col-sm-6 align-self-center wow fadeInLeft" data-wow-delay="0.5s">
                     <div class="image">
                         <img src="{{assets('images/Collage.png')}}">
                     </div>
                 </div>
-                <div class="col-sm-7 content align-self-center wow fadeInRight" data-wow-delay="0.5s">
+                <div class="col-sm-6 content pt-4 wow fadeInRight" data-wow-delay="0.5s">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
@@ -140,7 +167,7 @@
             <div class="row">
                  <div class="col-sm-7 content align-self-center wow fadeInLeft" data-wow-delay="0.5s">
                     <h2>Lorem ipsum dolor sit amet</h2>
-                    <h4>Lorem ipsum dolor sit amet</h4>
+                    <h4 class="mb-5">Lorem ipsum dolor sit amet</h4>
                     <ul>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>

@@ -12,14 +12,19 @@
 @import './includes/header';
 @import './includes/footer';
 
-//@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-
+html,
 body{
 	color: $boday_color;
 	font-size: 16px;
 	font-family: "Lexend Deca";
 	overflow-x:hidden;
+
+	@include respond(md) {
+		font-size: 14px;
+	}
 }
 
 a{
@@ -108,11 +113,11 @@ h1,h2,h3,h4,h5,h6{
 		li {
 		    list-style: none;
 		    position: relative;
-		    line-height: 1.5;
+		    line-height: 2;
 		    &:before{
 		    	position: absolute;
 		    	content: "-";
-		    	line-height: 1.5;
+		    	line-height: 2;
 		    	left: -20px;
 		    }
 		}

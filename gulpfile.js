@@ -73,6 +73,7 @@ gulp.task('copy', ['clean'], function() {
 gulp.task('sass', ['clean'], function() {
 
     var options = {
+        outputStyle : (env == 'prod') ? "compressed" : "expanded" ,
         includePaths: [
             path.join(src, 'scss/common'),
             'node_modules'

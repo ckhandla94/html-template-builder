@@ -17,16 +17,16 @@
                
                 {% for service in pricing %}
                     <div class="pricing-item">
-                        <div class="background box-shadow wow fadeIn"></div>
+                        <div class="background d-none d-md-block box-shadow wow fadeIn"></div>
                         <div class="row">
-                            <div class="col bg-transprant">
+                            <div class="col-md  bg-transprant">
                                 <div class="title">
                                     <div class="service-image wow zoomIn"  data-wow-delay="0.5s">
                                         <img src="{{assets(service.image)}}">
                                     </div>
                                     <h3 class="wow zoomIn"  data-wow-delay="0.5s">{{service.title}}</h3>
                                 </div>
-                                <div class="server-details ">
+                                <div class="server-details d-none d-md-block">
                                     <ul>
                                         <li class="wow zoomIn" data-wow-delay="0.5s">Basic Website Metrics</li>
                                         <li class="wow zoomIn" data-wow-delay="0.5s">Mobile-optimized Websites</li>
@@ -39,38 +39,86 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col pricing-data bg-white  wow fadeIn">
+                            <div class="col-md pricing-data bg-white  wow fadeIn">
                                 <div class="title">
                                     <h3 class="wow zoomIn"  data-wow-delay="0.5s">Personal</h3>
                                     <p class="wow zoomIn"  data-wow-delay="0.5s">Its free for personal use or dummy lines</p>
                                 </div>
                                 <ul>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude inactive"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude inactive"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude inactive"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude inactive"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude inactive"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude inactive"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Basic Website Metrics</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Mobile-optimized Websites</span>
+                                        <span class="incliude inactive"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Templates to Fit Every</span>
+                                        <span class="incliude inactive"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Need from Blogs to Portfolios</span>
+                                        <span class="incliude inactive"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Contributors</span>
+                                        <span class="incliude inactive"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Complete</span>
+                                        <span class="incliude inactive"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Customization with</span>
+                                        <span class="incliude inactive"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">CSS and JavaScript</span>
+                                        <span class="incliude active"></span>
+                                    </li>
                                 </ul>
                                 <div class="buttons wow zoomIn"  data-wow-delay="0.5s"><a class="btn btn-primary" href="#">Get for Free</a></div>
                             </div>  
 
-                            <div class="col pricing-data bg-white  wow fadeIn">
+                            <div class="col-md pricing-data bg-white  wow fadeIn">
                                 <div class="title">
                                     <h3 class="wow zoomIn" data-wow-delay="0.5s">Commercial <br> 40$ <small>Monthly</small></h3>
                                     <p class="wow zoomIn" data-wow-delay="0.5s">Save $96 annually</p>
                                 </div>
                                 <ul>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
-                                    <li class="wow zoomIn" data-wow-delay="0.5s"><span class="incliude active"></span></li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Basic Website Metrics</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Mobile-optimized Websites</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Templates to Fit Every</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Need from Blogs to Portfolios</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Contributors</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Complete</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">Customization with</span>
+                                        <span class="incliude active"></span>
+                                    </li>
+                                    <li class="wow zoomIn" data-wow-delay="0.5s">
+                                        <span class="d-block d-md-none">CSS and JavaScript</span>
+                                        <span class="incliude active"></span>
+                                    </li>
                                 </ul>
                                 <div class="buttons wow zoomIn" data-wow-delay="0.5s"><a class="btn btn-primary" href="#">Buy Now</a></div>
                             </div>
